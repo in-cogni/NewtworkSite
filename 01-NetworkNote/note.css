@@ -26,8 +26,9 @@ img[src="img/sun.png"]
 }
 .light
 {
-    background-image: linear-gradient(to bottom left, #240672, black, black);
-    color: white;
+    background-image: linear-gradient(to bottom left, #240672, #140539, #090219, black, black, black);
+    background-attachment: fixed;
+    color: ghostwhite;
 }
 
     .light #switchBackground
@@ -38,7 +39,8 @@ img[src="img/sun.png"]
 
 .dark
 {
-    background-image: linear-gradient(to bottom left, #FFDD40, wheat, wheat);
+    background-image: linear-gradient(to bottom left, #FFDD40, #fff2b4, wheat, wheat, wheat, wheat);
+    background-attachment: fixed;
     color: black;
 }
 
@@ -55,4 +57,8 @@ figure
 .nesting
 {
     list-style-type: " - ";
+}
+li
+{
+    margin-top: 15px;
 }
