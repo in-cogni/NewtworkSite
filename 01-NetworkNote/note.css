@@ -2,19 +2,15 @@
 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 2.5vh;
-    margin: 2vh 5% 0 5%;
+    margin:0 5% 0 5%;
 }
 img
 {
     width: 1000px;
     height: auto;
     margin: 2vh 0 2vh 0;
-    box-shadow: #bda4ff 0 0 20px;
 }
-    img:hover
-    {
-        box-shadow: white 0 0 20px;
-    }
+    
 img[src="img/sun.png"]
 {
     filter: brightness(0) invert(1);
@@ -22,9 +18,12 @@ img[src="img/sun.png"]
 
 #header
 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    top: 0px;
+    position: sticky;
+    
+    width: 1250px;
+    font-size: 4vh;
+    font-weight: bold;
 }
 
 #switchBackground
@@ -58,23 +57,51 @@ img[src="img/sun.png"]
         filter: brightness(0) invert(1);
     }
 
-.dark
-{
-    background-image: linear-gradient(to bottom left, #FFDD40, #fff2b4,#fffef8,#fffef8,#fffef8);
-    background-attachment: fixed;
-    color: black;
-}
+    .light img
+    {
+        box-shadow: #bda4ff 0 0 20px;
+        transition: box-shadow 0.5s ease;
+    }
+
+        .light img:hover
+        {
+            box-shadow: white 0 0 20px;
+        }
+    .light #header
+    {
+        background-image: linear-gradient(to top left, transparent,transparent, black, black);
+    }
+
+    .dark
+    {
+        background-image: linear-gradient(to bottom left, #FFDD40, #fff2b4,#fffef8,#fffef8,#fffef8);
+        background-attachment: fixed;
+        color: black;
+    }
 
     .dark #switchBackground
     {
         background-image: url('img/moon.png');
     }
-
-figure
+        .dark img
+        {
+            box-shadow: #FFDD40 0 0 20px;
+            transition: box-shadow 0.5s ease;
+        }
+.dark img:hover
 {
-    text-align: center;
-    font-style: italic;
+    box-shadow: black 0 0 20px;
 }
+        .dark #header
+        {
+            background-image: linear-gradient(to top left, transparent,transparent, white, white);
+        }
+           
+            figure
+            {
+                text-align: center;
+                font-style: italic;
+            }
 .nesting
 {
     list-style-type: " - ";
@@ -86,4 +113,5 @@ li
 h2
 {
     margin: 50px 0 50px 0;
+    
 }
