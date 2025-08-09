@@ -22,7 +22,7 @@ img[src="img/sun.png"]
 {
     body
     {
-        margin: 2vh 5dvw 0 5dvw;
+        margin: 2vh 2dvw 0 1dvw;
         padding-left: env(safe-area-inset-left);
         padding-right: env(safe-area-inset-right);
     }
