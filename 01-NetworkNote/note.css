@@ -37,6 +37,14 @@ img[src="img/sun.png"]
     top: 5px;
     right: 5px;
 }
+@supports (-webkit-touch-callout: none)
+{
+    #switchBackground
+    {
+        right: env(safe-area-inset-right);
+        margin-top: env(safe-area-inset-top);
+    }
+}
 .light
 {
     background-image: linear-gradient(to bottom left, #240672, #140539, #090219, black, black, black);
