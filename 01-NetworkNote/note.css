@@ -18,6 +18,15 @@ img[src="img/sun.png"]
 {
     filter: brightness(0) invert(1);
 }
+@supports (-webkit-touch-callout: none)
+{
+    body
+    {
+        margin: 2vh 5dvw 0 5dvw;
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+}
 #header
 {
     display: flex;
