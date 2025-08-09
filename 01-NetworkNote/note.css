@@ -16,10 +16,10 @@ img[src="img/sun.png"]
 
 #switchBackground
 {
-    width: 48px;
-    height: 48px;
+    width: 6vh;
+    height: 6vh;
     margin: 24px;
-    background-size: 48px 48px;
+    background-size: 6vh 6vh;
     position: fixed;
     top: 5px;
     right: 5px;
