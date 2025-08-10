@@ -110,6 +110,10 @@ li
 {
     margin-top: 15px;
 }
+#textContent li
+{
+    margin: 0;
+}
 h2
 {
     margin: 50px 0 50px 0;
@@ -121,6 +125,14 @@ h2
     color: #bda4ff;
     box-shadow: #bda4ff 0 0 2px inset, #bda4ff 0 0 3px;
 }
+.light #textContent:hover
+{
+    box-shadow: #bda4ff 0 0 2px inset, #bda4ff 0 0 3px, #bda4ff 5px 0 8px -3px;
+}
+.dark #textContent:hover
+{
+    box-shadow: #ad8f00 0 0 2px inset, #ad8f00 0 0 3px, #ad8f00 5px 0 8px -3px;
+}
 .dark #btnContent:hover
 {
     background-color: transparent;
@@ -130,6 +142,13 @@ h2
 #textContent
 {
     display: none;
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 50vh;
+    font-size: 2vh;
+    width: 800px;
+    
 }
 #btnContent
 {
