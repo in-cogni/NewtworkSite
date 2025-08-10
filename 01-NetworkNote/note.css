@@ -115,3 +115,31 @@ h2
     margin: 50px 0 50px 0;
     
 }
+.light #btnContent:hover
+{
+    background-color: transparent;
+    color: #bda4ff;
+    box-shadow: #bda4ff 0 0 2px inset, #bda4ff 0 0 3px;
+}
+.dark #btnContent:hover
+{
+    background-color: transparent;
+    color: #ad8f00;
+    box-shadow: #ad8f00 0 0 2px inset, #ad8f00 0 0 3px;
+}
+#textContent
+{
+    display: none;
+}
+#btnContent
+{
+    width: 20vh;
+    border-radius: 5px;
+    white-space: pre;
+    cursor: pointer;
+    margin-top: 50px;
+}
+#caret
+{
+    display: inline-block;
+}
