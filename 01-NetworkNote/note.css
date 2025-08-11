@@ -6,7 +6,8 @@
 }
 img
 {
-    width: 1000px;
+    /*width: 1000px;*/
+    width: 100vh;
     height: auto;
     margin: 2vh 0 2vh 0;
 }
