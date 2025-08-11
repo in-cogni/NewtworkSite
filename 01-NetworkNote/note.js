@@ -24,3 +24,62 @@ function textContentShadow(box1, box2)
     let textContent = document.getElementById("textContent");
     textContent.style.boxShadow = document.body.className === "light" ?  box1 : box2 ;
 }
+//let lastPosition = 0;
+//const headers = Array.from(document.querySelectorAll('h2, h3'));
+
+//function updateHeader()
+//{
+//    const scrollPosition = window.scrollY;
+//    if (Math.abs(scrollPosition - lastPosition) < 100) return;
+//    lastPosition = scrollPosition;
+
+//    for (const header of headers)
+//    {
+//        const rect = header.getBoundingClientRect();
+//        if (rect.top <= 100 && rect.bottom >= 0)
+//        {
+//            document.getElementById(`header`).textContent = header.textContent;
+//            break;
+//        }
+//    }
+//}
+//window.addEventListener('scroll', () => { requestAnimationFrame(updateHeader);});
+const headers = Array.from(document.querySelectorAll('h2, h3'));
+const headerEl = document.getElementById('headerText');
+let lastActiveHeader = null;
+
+function updateHeader()
+{
+    let activeHeader = headers.find(header =>
+    {
+        const rect = header.getBoundingClientRect();
+        return rect.top <= 100 && rect.bottom >= 0;
+    })
+    if (!activeHeader)
+    {
+        activeHeader = headers.findLast(header =>
+        {
+            const rect = header.getBoundingClientRect();
+            return rect.top <= 0;
+        });
+    }
+    if (activeHeader && activeHeader !== lastActiveHeader)
+    {
+        headerEl.textContent = activeHeader.textContent;
+        lastActiveHeader = activeHeader;
+    }
+}
+let ticking = false;
+window.addEventListener('scroll', () =>
+{
+    if (!ticking)
+    {
+        window.requestAnimationFrame(() =>
+        {
+            updateHeader();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+updateHeader();
