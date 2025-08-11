@@ -118,6 +118,32 @@ img[src="img/sun.png"]
 {
     list-style-type: " - ";
 }
+    .light a
+    {
+        color: aliceblue;
+    }
+
+        .light a:hover, .light a:hover:visited
+        {
+            color: #bda4ff;
+        }
+    .light a:visited
+    {
+        color: #4823a9;
+    }
+    
+    .dark a
+    {
+        color: black
+    }
+        .dark a:hover, .dark a:hover:visited
+        {
+            color: #ad8f00;
+        }
+    .dark a:visited
+    {
+        color: #ddbc22;
+    }
 li
 {
     margin-top: 15px;
