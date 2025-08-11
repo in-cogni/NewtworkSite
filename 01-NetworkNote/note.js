@@ -16,3 +16,11 @@ function btnContent()
     textContent.style.display = isHidden ? 'block' : 'none';
     caret.style.transform = isHidden ? `rotate(180deg)` : `rotate(0deg)`;
 }
+const btnContentel = document.getElementById(`btnContent`);
+btnContentel.addEventListener(`mouseenter`, function () { textContentShadow(`#bda4ff 0 0 2px inset, #bda4ff 0 0 3px, #bda4ff 5px 0 8px -3px`, `#ad8f00 0 0 2px inset, #ad8f00 0 0 3px, #ad8f00 5px 0 8px -3px`) });
+btnContentel.addEventListener(`mouseleave`, function () { textContentShadow(`none`, `none`) });
+function textContentShadow(box1, box2)
+{
+    let textContent = document.getElementById("textContent");
+    textContent.style.boxShadow = document.body.className === "light" ?  box1 : box2 ;
+}
